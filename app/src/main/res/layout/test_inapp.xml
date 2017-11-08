@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+     >
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/custom_white"
+            android:dividerHeight="2dp"
+            android:listSelector="@drawable/list_selecter"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF"
+            >
+        </ListView>
+
+</RelativeLayout>

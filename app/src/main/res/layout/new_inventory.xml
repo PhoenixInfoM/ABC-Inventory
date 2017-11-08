@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+	<ImageView android:layout_width="fill_parent"
+		android:src="@drawable/background_inventories"
+		android:scaleType="centerCrop"
+		android:layout_height="fill_parent"/>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/new_inventory_title"
+			android:text="@string/new_inventory_title"
+	          android:gravity="center_vertical|center_horizontal"
+			android:layout_marginTop="25dp"
+			android:textSize="17sp"
+			android:textStyle="bold"
+			android:textColor="@android:color/black"
+			android:layout_marginBottom="10dp"/>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/new_inventory_prop_name"
+			android:layout_below="@+id/new_inventory_title"
+			android:textColor="@android:color/black"
+			android:layout_marginTop="5dp"
+			android:gravity="center_vertical"
+			android:layout_centerHorizontal="true"
+			android:textSize="19sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_inventory_current_date"
+        android:layout_below="@+id/new_inventory_prop_name"
+        android:textSize="18sp"
+        android:textColor="@color/custom"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"/>
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:id="@+id/new_inventory_top_layout"
+			android:layout_marginLeft="25dp"
+			android:layout_marginRight="25dp"
+			android:layout_below="@+id/new_inventory_current_date"
+			android:layout_marginTop="7dp">
+
+		<Button
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.7"
+				android:id="@+id/new_inventory_add_new_prop_but"
+				android:background="@drawable/custom_button"
+				android:textAllCaps="false"
+				android:textColor="@color/custom_white"
+				android:text="@string/new_inventory_add_prop"
+				android:onClick="addNewProperty"
+				android:layout_margin="3dp"
+				android:minHeight="30dp"
+				android:drawableRight="@drawable/icon_forward"/>
+
+		<Button
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.3"
+				android:minHeight="30dp"
+				android:id="@+id/new_inventory_add_next_but"
+				android:background="@drawable/enable_but_selector"
+				android:textAllCaps="false"
+				android:textColor="@color/custom_white"
+				android:layout_margin="3dp"
+				android:text="Next"
+				android:onClick="goToZeroLvl"
+				android:enabled="false"
+				android:drawableRight="@drawable/icon_forward"/>
+
+	</LinearLayout>
+
+	<ListView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/new_inventory_title_prop_list"
+			android:choiceMode="singleChoice"
+			android:layout_below="@+id/new_inventory_top_layout"
+			android:layout_marginTop="7dp"/>
+</RelativeLayout>

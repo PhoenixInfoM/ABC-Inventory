@@ -1,0 +1,107 @@
+<resources>
+	<string name="app_name">ABC Inventory</string>
+
+	<string name="settings_name">Name:</string>
+	<string name="settings_email">Email:</string>
+	<string name="settings_password_text">Password:</string>
+	<string name="settings_save_but">Save</string>
+
+	<string name="screen_title">PROPERTIES LIST</string>
+	<string name="add_button">Add</string>
+	<string name="edit_button">Edit</string>
+	<string name="inventory_but">Inventory</string>
+	<string name="del_but">Delete</string>
+	<string name="detail_title">PROPERTY DETAILS</string>
+	<string name="details_furnished">Furnished</string>
+	<string name="details_unfurnished_but">Unfurnished</string>
+	<string name="details_save">Save</string>
+	<string-array name="default_prop_values">
+		<item>15 Picadilly, SW1 2AB</item>
+		<item>6 ingleby Gardens, M24 1SZ</item>
+		<item>235 Lambert Rd, PO16 2AQ</item>
+		<item>25 Clayton Road, CW6 7CV</item>
+		<item>Heaven House, NW6 1PA</item>
+	</string-array>
+	<!--<string name="group_address">Address</string>-->
+	<!--<string name="group_prop_types">Property Type</string>-->
+	<!--<string name="group_bedrooms">No of Bedrooms</string>-->
+	<string-array name="base_groups_values">
+		<item>Address</item>
+	</string-array>
+
+	<string-array name="base_child_values_address_group">
+		<item>House No. </item>
+		<item>Street </item>
+		<item>City </item>
+		<item>Postal Code </item>
+		<item>Country </item>
+	</string-array>
+
+	<string-array name="expand_child_info">
+		<item>House No. </item>
+		<item>Street </item>
+		<item>City </item>
+		<item>Postal Code </item>
+		<item>Country </item>
+		<item>Property Type </item>
+		<item>Bedrooms </item>
+		<item>Furnished </item>
+	</string-array>
+	<string-array name="base_child_values_prop_type_group">
+		<item>Detached</item>
+		<item>Semi-detached</item>
+		<item>Terrace</item>
+		<item>End-of-Terrace</item>
+		<item>Flat</item>
+	</string-array>
+	<string-array name="base_child_values_no_of_bedrooms">
+		<item>Bedroom 1</item>
+		<item>Bedroom 2</item>
+		<item>Bedroom 3</item>
+		<item>Bedroom 4</item>
+		<item>Bedroom 5</item>
+		<item>Bedroom 6</item>
+	</string-array>
+	<string name="inventories_title">INVENTORIES LIST</string>
+	<string name="inventories_view_but">View</string>
+	<string name="inventories_edit_but">Edit</string>
+	<string name="inventories_email_but">Email</string>
+	<string name="inventories_del_but">Delete</string>
+	<string name="new_inventory_title">INVENTORY ENTRY PROPERTY SELECTION</string>
+	<string name="new_inventory_add_prop">Add New Property  </string>
+	<string name="actionbar_title">   Inventories</string>
+	<string name="inventories_zero_lvl_title">INVENTORY ENTRY</string>
+	<string name="inv_zero_lvl_save_but">Save</string>
+	<string name="inv_zero_lvl_view_but">View</string>
+	<string-array name="default_inventory_values">
+		<item>15 Picadilly, SW1 2AB</item>
+		<item>6 ingleby Gardens, M24 1SZ</item>
+		<item>235 Lambert Rd, PO16 2AQ</item>
+		<item>25 Clayton Road, CW6 7CV</item>
+		<item>Heaven House, NW6 1PA</item>
+	</string-array>
+	<string-array name="default_inventory_date">
+		<item>Date: 2014–11–11</item>
+		<item>Date: 2012–03–09</item>
+		<item>Date: 2014–10–24</item>
+		<item>Date: 2012–03–19</item>
+		<item>Date: 2012–03–19</item>
+	</string-array>
+	<string-array name="main_list_items">
+		<item>PROPERTIES</item>
+		<item>INVENTORIES</item>
+		<item>SETTINGS</item>
+		<!--<item>SYNC SETTINGS</item>-->
+	</string-array>
+	<string name="title_activity_inventories_third_lvl">InventoriesThirdLvl</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="inventories_third_lvl_camera">Camera</string>
+	<string name="inventories_third_lvl_save">Save</string>
+	<string name="title_activity_view">ViewAct</string>
+	<string name="view_main_title">INVENTORY VIEW</string>
+	
+	<string name="title_new_plus">New +</string>
+	<string name="title_delete">Delete</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/custom"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/first_lvl_items_name"
+        android:layout_width="0dp"
+        android:gravity="center|left"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:layout_weight="0.65"
+        android:minHeight="30dp"
+        android:text="demo"
+        android:textColor="@color/custom_white" />
+    <EditText
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.45"
+        android:id="@+id/sizeET"
+        android:textColor="#000"
+        android:layout_margin="5dp"
+android:hint="enter value"
+        android:lines="1"
+        android:inputType="text"
+
+        android:maxLines="1"
+        android:layout_gravity="center_vertical"
+        android:background="@color/custom_white" />
+
+    <Spinner
+        android:id="@+id/inventories_second_main_lvl_spinner"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="0.35"
+        android:background="@drawable/btn_dropdown_selected"
+        android:minHeight="30dp" />
+    <Spinner
+        android:id="@+id/inventories_second_main_lvl_spinner_conditiion"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="0.35"
+        android:background="@drawable/btn_dropdown_selected"
+        android:minHeight="30dp" />
+    <EditText
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.45"
+        android:id="@+id/commentET"
+        android:textColor="#000"
+        android:layout_margin="5dp"
+        android:lines="1"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_gravity="center_vertical"
+        android:background="@color/custom_white" />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:visibility="gone"
+        android:id="@+id/forwardIV"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_forward_10"/>
+
+    <com.backofficecloudapps.prop.inventory.other.CustomNumberPicker
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.20"
+        android:visibility="gone"
+        android:layout_margin="1dp"
+        android:id="@+id/numberPicker"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

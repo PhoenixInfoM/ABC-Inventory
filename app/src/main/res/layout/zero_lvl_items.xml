@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+	<TextView
+			android:layout_width="0dp"
+			android:layout_height="55dp"
+			android:layout_weight="0.45"
+
+		android:gravity="center|left"
+			android:layout_gravity="center|left"
+			android:id="@+id/zero_lvl_text"
+			android:textColor="@color/custom_white"
+			android:textSize="18sp"/>
+
+	<Spinner
+		android:id="@+id/inventories_second_main_lvl_spinner_conditiion"
+		android:visibility="gone"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+
+		android:layout_weight="0.35"
+		android:background="@drawable/btn_dropdown_selected"
+		 />
+
+	<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.1"
+			android:id="@+id/zero_lvl_icon"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/icon_forward_10"/>
+
+</LinearLayout>

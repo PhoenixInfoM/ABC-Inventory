@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/propertyDetailSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <ImageView android:layout_width="fill_parent"
+        android:src="@drawable/background_inventories"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent"/>
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/detail_title"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ExpandableListView
+        android:id="@+id/details_address_expandable_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_title" />
+
+
+    <RelativeLayout
+
+        android:id="@+id/propertyRL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/details_address_expandable_list"
+
+        >
+
+        <TextView
+            android:id="@+id/prop_det_group_item_but1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_text_view"
+            android:drawableRight="@drawable/icon_edit"
+            android:gravity="center|left"
+            android:paddingLeft="7dp"
+            android:text="Property type"
+            android:textColor="@color/custom_white"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/inventories_third_main_lvl_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="5px"
+
+            android:layout_weight="0.30"
+            android:background="@drawable/btn_dropdown_selected"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bedroomRL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/propertyRL"
+        android:layout_marginTop="7dp"
+
+        >
+
+        <TextView
+            android:id="@+id/prop_det_group_item_but"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_text_view"
+            android:drawableRight="@drawable/icon_edit"
+            android:gravity="center|left"
+            android:paddingLeft="7dp"
+            android:text="No. of bedrooms"
+            android:textColor="@color/custom_white"
+            android:textSize="22sp" />
+
+        <com.backofficecloudapps.prop.inventory.other.CustomNumberPicker
+            android:id="@+id/third_number_lvl_items_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:layout_marginBottom="4px"
+            android:layout_marginRight="2dp"
+            android:layout_alignBottom="@+id/prop_det_group_item_but"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/_property_details_footer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bedroomRL"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/details_unfurnished_but"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.4"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/icon_unpress"
+                android:gravity="center_vertical|left"
+                android:minHeight="30dp"
+                android:onClick="setFurnished"
+                android:text="@string/details_unfurnished_but"
+                android:textAllCaps="false"
+                android:textColor="@color/custom_white"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/details_furnished_but"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.4"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/icon_unpress"
+                android:gravity="center_vertical|left"
+                android:minHeight="30dp"
+                android:onClick="setFurnished"
+                android:text="@string/details_furnished"
+                android:textAllCaps="false"
+                android:textColor="@color/custom_white"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7" />
+
+            <Button
+                android:id="@+id/details_save_but"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/icon_save"
+                android:gravity="center_vertical|left"
+                android:minHeight="30dp"
+                android:onClick="saveData"
+                android:text="@string/details_save"
+                android:textAllCaps="false"
+                android:textColor="@color/custom_white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

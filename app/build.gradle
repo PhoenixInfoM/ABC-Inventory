@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        sign {
+            keyAlias 'alias'
+            keyPassword 'abc12345'
+            storeFile file('abc.jks')
+            storePassword 'abc12345'
+        }
+    }
+
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.backofficecloudapps.prop.inventory"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    //    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+     //   signingConfig signingConfigs.sign
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           // debug {
+           //     signingConfig signingConfigs.sign
+           // }
+        }
+        productFlavors {
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile 'com.itextpdf:itextpdf:5.5.10'
+    compile files('src/main/assets/debug.jar')
+}
+
+

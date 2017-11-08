@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/_property_details_footer_view"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_gravity="left"
+            android:id="@+id/details_unfurnished_but"
+            android:minHeight="30dp"
+            android:textSize="20sp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/custom_white"
+            android:onClick="setFurnished"
+            android:textAllCaps="false"
+            android:gravity="center_vertical|left"
+            android:drawableRight="@drawable/icon_unpress"
+            android:text="@string/details_unfurnished_but"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_gravity="left"
+            android:onClick="setFurnished"
+            android:gravity="center_vertical|left"
+            android:id="@+id/details_furnished_but"
+            android:minHeight="30dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/custom_white"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:drawableRight="@drawable/icon_unpress"
+            android:text="@string/details_furnished"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:id="@+id/details_save_but"
+            android:minHeight="30dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/custom_white"
+            android:onClick="saveData"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:gravity="center_vertical|left"
+            android:drawableRight="@drawable/icon_save"
+            android:text="@string/details_save"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:id="@+id/custum_main_lin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:id="@+id/custum_main_desc"
+            android:textSize="18sp"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/custom_white"
+            android:text="  ggggg"
+            android:layout_gravity="center_vertical"/>
+        <EditText android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:singleLine="true"
+            android:lines="1"
+            android:inputType="text"
+            android:id="@+id/custum_main_edit"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:background="@color/custom_white"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"/>
+
+
+        <Spinner android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_margin="5dp"
+            android:minHeight="30dp"
+            android:background="@drawable/btn_dropdown_selected"
+            android:id="@+id/custum_main_spinner"
+            android:layout_gravity="center_vertical"/>
+
+        <com.backofficecloudapps.prop.inventory.other.CustomNumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/custum_main_custom_num_pic"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:id="@+id/custum_main_img"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_forward_10"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

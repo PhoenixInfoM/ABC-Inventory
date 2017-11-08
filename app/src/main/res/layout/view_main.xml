@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inventory.acornford.activity.activity_ViewSaveData">
+
+    <ImageView android:layout_width="fill_parent"
+        android:src="@drawable/background_inventories"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_main_title"
+        android:text="@string/view_main_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_main_prop_name"
+        android:layout_below="@+id/view_main_title"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_main_current_date"
+        android:layout_below="@+id/view_main_prop_name"
+        android:textSize="18sp"
+        android:textColor="@color/custom"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/view_main_top_layout"
+        android:layout_below="@+id/view_main_current_date"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/view_main_save_but"
+            android:text="@string/inventories_third_lvl_save"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:visibility="gone"
+            android:layout_margin="3dp"
+            android:minHeight="30dp"
+            android:gravity="center_vertical|left"
+            android:drawableRight="@drawable/icon_save"
+            android:textColor="@color/custom_white"
+            android:background="@drawable/enable_but_selector"
+            android:onClick="viewInventory"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/view_main_edit_but"
+            android:text="@string/inventories_edit_but"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_white"
+            android:drawableRight="@drawable/icon_edit"
+            android:layout_margin="3dp"
+            android:minHeight="30dp"
+            android:gravity="center_vertical|left"
+            android:background="@drawable/enable_but_selector"
+            android:onClick="editInventory"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/view_main_email_but"
+            android:text="@string/inventories_email_but"
+            android:enabled="true"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_white"
+            android:drawableRight="@drawable/icon_email"
+            android:layout_margin="3dp"
+            android:minHeight="30dp"
+            android:gravity="center_vertical|left"
+            android:background="@drawable/enable_but_selector"
+            android:onClick="sendByEmail"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/view_main_delete_but"
+            android:layout_margin="3dp"
+            android:minHeight="30dp"
+            android:gravity="center_vertical|left"
+            android:text="@string/inventories_del_but"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_white"
+            android:drawableRight="@drawable/icon_cross"
+            android:background="@drawable/enable_but_selector"
+            android:onClick="deleteInventory"/>
+    </LinearLayout>
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:transcriptMode="disabled"
+        android:scrollbars="none"
+        android:id="@+id/view_main_expandable_view"
+        android:layout_below="@+id/view_main_top_layout"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

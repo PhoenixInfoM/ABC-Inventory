@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:layout_width="fill_parent"
+        android:src="@drawable/background_inventories"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_fourth_lvl_title"
+        android:text="@string/inventories_zero_lvl_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_fourth_lvl_prop_name"
+        android:layout_below="@+id/inventories_fourth_lvl_title"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="19sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_fourth_lvl_current_date"
+        android:layout_below="@+id/inventories_fourth_lvl_prop_name"
+        android:textSize="18sp"
+        android:textColor="@color/custom"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_fourth_lvl_current_item"
+        android:layout_below="@+id/inventories_fourth_lvl_current_date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fourth_lvl_cam_save_layout"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/inventories_fourth_lvl_current_item"
+        android:layout_marginTop="5dp">
+
+
+        <Button
+            android:id="@+id/txtBallon"
+            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:text="0"
+            android:minHeight="30dp"
+            android:visibility="visible"
+            android:background="@drawable/custom_button"
+            android:layout_margin="5dp"
+            android:textSize="11sp"
+            android:textColor="@color/custom_white"
+            android:padding="5dp"
+            />
+
+        <Button android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:textAllCaps="false"
+            android:id="@+id/cameraBT"
+            android:textColor="@color/custom_white"
+            android:drawableRight="@drawable/icon_camera"
+            android:layout_margin="5dp"
+            android:onClick="takePhoto"
+            android:textSize="11sp"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:text="@string/inventories_third_lvl_camera"
+            />
+
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:textAllCaps="false"
+            android:id="@+id/newBT"
+            android:textSize="11sp"
+            android:textColor="@color/custom_white"
+            android:layout_margin="5dp"
+            android:onClick="saveInputedDataMulti"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:text="@string/title_new_plus"
+            />
+
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:id="@+id/saveBT"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:textColor="@color/custom_white"
+            android:textAllCaps="false"
+            android:drawableRight="@drawable/icon_save"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:onClick="saveInputedData"
+            android:text="@string/inventories_third_lvl_save"/>
+
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:textAllCaps="false"
+            android:id="@+id/deleteBT"
+            android:textSize="11sp"
+            android:textColor="@color/custom_white"
+            android:layout_margin="5dp"
+            android:onClick="deleteMultiScreen"
+            android:drawableRight="@drawable/icon_cross"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:text="@string/title_delete"
+            />
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_multi_screen_arrow"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/fourth_lvl_cam_save_layout"
+        android:layout_marginTop="5dp">
+
+        <ImageView android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/leftArrow"
+            android:src="@drawable/ic_left_arrow"
+            />
+
+
+        <ImageView android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:id="@+id/rightArrow"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_right_arrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/custom_white"
+
+        android:id="@+id/inventories_fourth_lvl_list_view"
+        android:layout_below="@+id/rel_multi_screen_arrow" />
+</RelativeLayout>

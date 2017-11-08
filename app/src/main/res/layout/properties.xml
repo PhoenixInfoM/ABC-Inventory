@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Properties">
+
+  <ImageView android:layout_width="fill_parent"
+			 android:scaleType="centerCrop"
+			 android:src="@drawable/background_properties"
+			 android:layout_height="fill_parent"/>
+
+     <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/prop_screen_title"
+               android:text="@string/screen_title"
+               android:layout_centerHorizontal="true"
+               android:gravity="center_vertical"
+               android:layout_marginTop="25dp"
+               android:textStyle="bold"
+               android:textColor="@android:color/black"
+               android:textSize="17sp"/>
+     <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:id="@+id/prop_top_layout"
+               android:layout_marginTop="25dp"
+               android:layout_marginRight="3dp"
+               android:layout_marginLeft="3dp"
+               android:layout_below="@+id/prop_screen_title">
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/add_button"
+                    android:layout_margin="2dp"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical|left"
+                    android:textAllCaps="false"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/icon_add"
+                    android:textColor="@color/custom_white"
+                    android:background="@drawable/custom_button"
+                    android:onClick="addNewProp"/>
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:id="@+id/properties_edit_but"
+                    android:text="@string/edit_button"
+                    android:layout_margin="2dp"
+                    android:singleLine="true"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical|left"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_edit"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="editProp"/>
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:id="@+id/properties_inventories_but"
+                    android:text="@string/inventory_but"
+                    android:layout_margin="2dp"
+                    android:textAllCaps="false"
+                    android:minHeight="30dp"
+                    android:singleLine="true"
+                    android:enabled="false"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_inventory_16"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="goToInventoryScreen"/>
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:minHeight="30dp"
+                    android:layout_margin="2dp"
+                    android:id="@+id/properties_del_but"
+                    android:text="@string/del_but"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|left"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_cross"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="deleteProp"/>
+     </LinearLayout>
+
+     <ExpandableListView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/prop_list_view"
+               android:layout_below="@+id/prop_top_layout"
+               android:layout_marginTop="15dp"/>
+</RelativeLayout>

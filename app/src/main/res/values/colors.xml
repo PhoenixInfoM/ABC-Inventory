@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="custom">#218d91</color>
+	<color name="custom_trans">#9c90c6c8</color>
+	<color name="custom_disable">#90c6c8</color>
+	<color name="custom_white">#FFFFFF</color>
+	<color name="action_bar_color">#218d91</color>
+	<color name="action_bar_text">#FFFFFF</color>
+	<color name="expandable_background">#14000000</color>
+</resources>

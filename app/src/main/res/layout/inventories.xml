@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+  <ImageView android:layout_width="fill_parent"
+             android:src="@drawable/background_inventories"
+             android:scaleType="centerCrop"
+             android:layout_height="fill_parent"/>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+               android:id="@+id/inventories_title"
+               android:text="@string/inventories_title"
+               android:layout_centerHorizontal="true"
+               android:gravity="center_vertical"
+               android:textColor="@android:color/black"
+               android:layout_marginTop="25dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="17sp"
+			android:textStyle="bold"/>
+
+     <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:id="@+id/inventories_top_layout"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="25dp"
+               android:layout_marginLeft="25dp"
+               android:visibility="gone"
+               android:layout_below="@+id/inventories_title">
+
+         <Button
+             android:id="@+id/inventories_view_but"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_margin="3dp"
+             android:layout_weight="0.25"
+             android:background="@drawable/enable_but_selector"
+             android:drawableRight="@drawable/icon_view"
+             android:enabled="false"
+             android:gravity="center_vertical|left"
+             android:minHeight="30dp"
+             android:onClick="viewInventory"
+             android:text="@string/inventories_view_but"
+             android:textAllCaps="false"
+             android:textColor="@color/custom_white" />
+
+         <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:id="@+id/inventories_edit_but"
+                    android:text="@string/inventories_edit_but"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_edit"
+                    android:layout_margin="3dp"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical|left"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="editInventory"/>
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:id="@+id/inventories_email_but"
+                    android:text="@string/inventories_email_but"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_email"
+                    android:layout_margin="3dp"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical|left"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="sendByEmail"/>
+
+          <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:id="@+id/inventories_delete_but"
+                    android:layout_margin="3dp"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/inventories_del_but"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:textColor="@color/custom_white"
+                    android:drawableRight="@drawable/icon_cross"
+                    android:background="@drawable/enable_but_selector"
+                    android:onClick="deleteInventory"/>
+     </LinearLayout>
+
+     <Button
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+         android:layout_marginTop="17dp"
+         android:text="New Inventory +"
+               android:minHeight="30dp"
+               android:textAllCaps="false"
+               android:id="@+id/inventories_add_new"
+               android:textColor="@color/custom_white"
+
+         android:background="@drawable/custom_button"
+               android:onClick="addNewInventory"
+         android:layout_below="@+id/inventories_title"
+         android:layout_centerHorizontal="true" />
+     <ListView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+               android:id="@+id/inventories_list_view"
+               android:layout_below="@id/inventories_add_new"/>
+</RelativeLayout>

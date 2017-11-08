@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:layout_width="fill_parent"
+        android:src="@drawable/background_inventories"
+        android:scaleType="centerCrop"
+        android:layout_height="fill_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_third_main_lvl_title"
+        android:text="@string/inventories_zero_lvl_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_third_main_lvl_prop_name"
+        android:layout_below="@+id/inventories_third_main_lvl_title"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:textSize="19sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_third_main_lvl_current_date"
+        android:layout_below="@+id/inventories_third_main_lvl_prop_name"
+        android:textSize="18sp"
+        android:textColor="@color/custom"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventories_third_main_lvl_current_item"
+        android:layout_below="@+id/inventories_third_main_lvl_current_date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/third_main_lvl_top_layout"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/inventories_third_main_lvl_current_item"
+        android:layout_marginTop="5dp">
+
+        <Space android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"/>
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_white"
+            android:drawableRight="@drawable/icon_camera"
+            android:layout_margin="10dp"
+            android:onClick="takePhoto"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:text="@string/inventories_third_lvl_camera"/>
+
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:textColor="@color/custom_white"
+            android:textAllCaps="false"
+            android:onClick="saveInputedData"
+            android:drawableRight="@drawable/icon_save"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_button"
+            android:minHeight="30dp"
+            android:text="@string/inventories_third_lvl_save"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:id="@+id/third_main_lvl_spinner_layout"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:background="@color/custom"
+        android:layout_height="55dp"
+        android:layout_below="@id/third_main_lvl_top_layout">
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:id="@+id/custom_inv_desc_ts"
+            android:textColor="@color/custom_white"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"/>
+
+        <Spinner android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:background="@drawable/btn_dropdown_selected"
+            android:id="@+id/inventories_third_main_lvl_spinner"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/third_main_lvl_other_layout"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@color/custom"
+        android:layout_height="55dp"
+        android:layout_below="@id/third_main_lvl_spinner_layout">
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/inventories_third_main_lvl_other"
+            android:textColor="@color/custom_white"
+            android:minHeight="30dp"
+            android:text="   Other"
+            android:layout_margin="5dp"/>
+
+        <EditText android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:lines="1"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_gravity="center_vertical"
+            android:background="@color/custom_white"
+            android:id="@+id/inventories_third_main_lvl_other_e_text"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/third_main_lvl_comment_layout"
+        android:layout_width="match_parent"
+        android:background="@color/custom"
+        android:layout_height="55dp"
+        android:layout_below="@id/third_main_lvl_other_layout">
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:id="@+id/inventories_third_main_lvl_comment"
+            android:textColor="@color/custom_white"
+            android:minHeight="30dp"
+            android:layout_gravity="center_vertical"
+            android:text="   Comment Box"
+            android:layout_margin="5dp"/>
+
+        <EditText android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:lines="1"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/custom_white"
+            android:id="@+id/inventories_third_main_lvl_comment_e_text"
+            android:minHeight="30dp"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

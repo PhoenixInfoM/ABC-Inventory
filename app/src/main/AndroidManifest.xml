@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.backofficecloudapps.prop.inventory">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CustomActionBarTheme"
+        android:icon="@drawable/ic_launcher">
+        <activity
+            android:name=".activity.activity_SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".properties.activity_PropertiesMain"
+            android:theme="@style/CustomActionBarTheme"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity android:name=".setting.SettingsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.activity_AddNewProperty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.activity_EnlargeImage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.activity_WholeInventoryDeatils"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.activity_Inventories"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inventories.inventories_ZeroLvl"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inventories.inventories_FirstLvl"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inventories.inventories_SecondLvl"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".inventories.inventories_ThirdLvl"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/title_activity_inventories_third_lvl" >
+        </activity>
+        <activity
+            android:name=".inventories.inventories_FourthLvl"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".inventories.inventories_FifthLvl"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".activity.activity_ViewSaveData"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_view" >
+        </activity>
+        <activity
+            android:name=".activity.activity_ViewDataByParentClick"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_view"
+            android:theme="@style/Base.Theme.AppCompat.Dialog">
+        </activity>
+        <activity
+            android:name=".mainmenu.activity_MainMenu"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/CustomActionBarTheme">
+        </activity>
+
+        <activity
+            android:name=".inapp_purchase.activity_InApptesting"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+
+    </application>
+
+</manifest>
